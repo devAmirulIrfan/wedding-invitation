@@ -213,11 +213,11 @@ export const weddingCalendarConfig: CalendarDrawerConfig = {
     closeButtonText: "Tutup",
     providers: {
       google: {
-        label: "Add to Google Calendar",
+        label: "Google Calendar",
         icon: FaGoogle,
       },
       apple: {
-        label: "Add to Apple Calendar",
+        label: "Apple Calendar",
         icon: FaApple,
       },
     },
