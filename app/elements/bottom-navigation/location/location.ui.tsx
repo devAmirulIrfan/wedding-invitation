@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import {
   Drawer,
   DrawerClose,
@@ -9,8 +9,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import { AiOutlineCar } from "react-icons/ai";
-import { FiMap } from "react-icons/fi";
+import { Button } from "@/components/ui/button";
 import { locationConfig } from "../../../config/config-app-environment";
 
 export interface CalendarDrawerInterface {
@@ -24,45 +23,57 @@ export function LocationDrawer({
 }: CalendarDrawerInterface) {
   const { coordinates, translations } = locationConfig;
   const { latitude, longitude } = coordinates;
-  
+
   const googleMapsUrl = `https://www.google.com/maps?q=${latitude},${longitude}`;
   const wazeUrl = `https://waze.com/ul?q=${latitude},${longitude}`;
-  
+
   return (
     <Drawer open={open} onOpenChange={onOpenChange}>
-      <DrawerTrigger></DrawerTrigger>
+      <DrawerTrigger />
       <DrawerContent>
         <DrawerHeader className="text-center">
           <DrawerTitle>{translations.title}</DrawerTitle>
           <DrawerDescription>{translations.description}</DrawerDescription>
         </DrawerHeader>
 
-        <div className="px-4 py-6 space-y-6 text-center">
-          <div className="space-y-4">
-            <div>
-              <a
-                href={googleMapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition"
-              >
-                <FiMap className="w-5 h-5" />
-                {translations.googleMapsButtonText}
-              </a>
+        <div className="px-4 py-6 flex justify-center gap-12 text-center">
+          {/* Google Maps */}
+          <a
+            href={googleMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center text-black space-y-2"
+            title={translations.googleMapsButtonText}
+          >
+            <div className="w-12 h-12 relative">
+              <Image
+                src="https://drive.google.com/uc?export=view&id=13RmzCg2Zz9dDl0ykKpma4IeLa1EvzZyJ"
+                alt="Google Maps"
+                fill
+                style={{ objectFit: "contain" }}
+              />
             </div>
+            <span className="text-sm">{translations.googleMapsButtonText}</span>
+          </a>
 
-            <div>
-              <a
-                href={wazeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition"
-              >
-                <AiOutlineCar className="w-5 h-5" />
-                {translations.wazeButtonText}
-              </a>
+          {/* Waze */}
+          <a
+            href={wazeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center text-black space-y-2"
+            title={translations.wazeButtonText}
+          >
+            <div className="w-12 h-12 relative">
+              <Image
+                src="https://drive.google.com/uc?export=view&id=1TfOFNimG-15WsYROUK_FS3XaTWGzInj1"
+                alt="Waze"
+                fill
+                style={{ objectFit: "contain" }}
+              />
             </div>
-          </div>
+            <span className="text-sm">{translations.wazeButtonText}</span>
+          </a>
         </div>
 
         <DrawerFooter>

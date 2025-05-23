@@ -295,8 +295,8 @@ export const locationConfig: LocationConfig = {
   translations: {
     title: "Lokasi Kami",
     description: "Gunakan aplikasi di bawah untuk navigasi ke lokasi kami.",
-    googleMapsButtonText: "Open in Google Maps",
-    wazeButtonText: "Navigate with Waze",
+    googleMapsButtonText: "Google Maps",
+    wazeButtonText: "Waze",
     closeButtonText: "Tutup",
   },
 };
