@@ -47,7 +47,7 @@ export function LocationDrawer({
           >
             <div className="w-12 h-12 relative">
               <Image
-                src="https://drive.google.com/uc?export=view&id=13RmzCg2Zz9dDl0ykKpma4IeLa1EvzZyJ"
+                src="https://xhpugefhcgqjkanhmanu.supabase.co/storage/v1/object/public/wedding-video//Google_Maps_icon_(2020).svg.png"
                 alt="Google Maps"
                 fill
                 style={{ objectFit: "contain" }}
@@ -66,7 +66,7 @@ export function LocationDrawer({
           >
             <div className="w-12 h-12 relative">
               <Image
-                src="https://drive.google.com/uc?export=view&id=1TfOFNimG-15WsYROUK_FS3XaTWGzInj1"
+                src="https://xhpugefhcgqjkanhmanu.supabase.co/storage/v1/object/public/wedding-video//waze.png"
                 alt="Waze"
                 fill
                 style={{ objectFit: "contain" }}

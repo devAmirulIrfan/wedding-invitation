@@ -60,7 +60,7 @@ export function CalendarDrawer({
           >
             <div className="relative w-12 h-12 p-2 bg-red-500 rounded-full hover:bg-red-600 transition">
               <Image
-                src="https://drive.google.com/uc?export=view&id=1VdK6U0W_Tzoff-o3R6A64q2h87YW5oz_"
+                src="https://xhpugefhcgqjkanhmanu.supabase.co/storage/v1/object/public/wedding-video//Google_Calendar_icon_(2020).svg.png"
                 alt="Google Calendar"
                 fill
                 style={{ objectFit: "contain" }}
@@ -79,7 +79,7 @@ export function CalendarDrawer({
           >
             <div className="relative w-12 h-12 p-2 bg-gray-800 rounded-full hover:bg-gray-900 transition">
               <Image
-                src="https://drive.google.com/uc?export=view&id=1E5omPycE8G7utqg44g4E9_xv699ZRFFa"
+                src="https://xhpugefhcgqjkanhmanu.supabase.co/storage/v1/object/public/wedding-video//Apple_Calendar_(iOS).svg.png"
                 alt="Apple Calendar"
                 fill
                 style={{ objectFit: "contain" }}
